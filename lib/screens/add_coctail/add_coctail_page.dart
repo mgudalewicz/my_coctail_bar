@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_coctail_bar/main.dart';
 import 'package:my_coctail_bar/screens/add_coctail/cubit/add_coctail_cubit.dart';
-import 'package:my_coctail_bar/screens/home_page.dart';
 import 'package:my_coctail_bar/widget/widget_text_form_field.dart';
 
 class AddCoctail extends StatefulWidget {
@@ -79,7 +79,7 @@ class _AddCoctailState extends State<AddCoctail> {
                 );
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) => const MyApp(),
               ),
             );
           }
