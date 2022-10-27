@@ -10,6 +10,7 @@ class WidgetTextFormField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.inputFormatters,
     this.validatorStrength = false,
+    this.maxLine = 1,
   });
 
   final GlobalKey<FormFieldState<String>>? formFieldKey;
@@ -18,6 +19,7 @@ class WidgetTextFormField extends StatelessWidget {
   final String? hintText;
   final List<TextInputFormatter>? inputFormatters;
   final bool validatorStrength;
+  final int? maxLine;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class WidgetTextFormField extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: TextFormField(
         inputFormatters: inputFormatters,
-        maxLines: null,
+        maxLines: maxLine,
         keyboardType: keyboardType,
         validator: (value) {
           if (value == null || value.isEmpty) {
