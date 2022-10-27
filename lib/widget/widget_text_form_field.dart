@@ -35,7 +35,7 @@ class WidgetTextFormField extends StatelessWidget {
           }
           if (validatorStrength == true) {
             int strenght = int.parse(value);
-            if (strenght <= 0) {
+            if (strenght < 0) {
               return 'Ilość alkoholu nie może być mniejsza niż 0 %';
             }
           }
