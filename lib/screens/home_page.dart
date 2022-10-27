@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_coctail_bar/screens/add_coctail/add_coctail_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -27,13 +28,13 @@ class _HomePageState extends State<HomePage> {
             : Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                  Text('Przepisy'),
+                  Text('Koktajle'),
                 ],
               ),
       ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return const Text('Pierwsza strona');
+          return const AddCoctail();
         }
         return const Text('Druga strona');
       }),
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_bar),
-            label: 'Przepisy',
+            label: 'Koktajle',
           ),
         ],
       ),
