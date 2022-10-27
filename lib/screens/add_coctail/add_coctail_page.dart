@@ -47,7 +47,7 @@ class _AddCoctailState extends State<AddCoctail> {
                         ),
                         WidgetTextFormField(
                           formFieldKey: _recipeInputKey,
-                          labelText: 'Opis przyrządzenia drinka',
+                          labelText: 'Opis przyrządzenia koktajlu',
                           maxLine: null,
                         ),
                       ],
@@ -80,7 +80,6 @@ class _AddCoctailState extends State<AddCoctail> {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const HomePage(),
-                fullscreenDialog: true,
               ),
             );
           }
