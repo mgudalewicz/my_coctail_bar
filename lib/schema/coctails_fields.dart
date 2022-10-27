@@ -1,4 +1,5 @@
 class CoctailsFields {
+  
   /// Type [String]
   static const String id = 'id';
 

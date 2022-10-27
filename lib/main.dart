@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_coctail_bar/screens/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:my_coctail_bar/service_locator.dart';
 import 'firebase_options.dart';
 
-
 Future<void> main() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  configureDepenedencies();
   runApp(const MyApp());
 }
 
