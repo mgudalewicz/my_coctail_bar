@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_coctail_bar/models/coctail/coctail.dart';
+import 'package:my_coctail_bar/screens/coctails_view/coctails_view_details/coctails_view_details_screen.dart';
 import 'package:my_coctail_bar/screens/coctails_view/coctails_view_home/cubit/coctails_view_home_cubit.dart';
 
 class CoctailViewHomeBody extends StatefulWidget {
@@ -32,7 +33,13 @@ class _CoctailViewHomeBodyState extends State<CoctailViewHomeBody> {
         children: [
           for (final coctail in coctails) ...[
             GestureDetector(
-              onTap: () {},
+              onTap: (() => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CoctailViewDetailsScreen(
+                        id: coctail.id,
+                      ),
+                    ),
+                  )),
               child: SizedBox(
                 height: 63,
                 child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
