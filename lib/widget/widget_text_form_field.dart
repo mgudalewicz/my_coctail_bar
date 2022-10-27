@@ -9,7 +9,7 @@ class WidgetTextFormField extends StatelessWidget {
     this.hintText,
     this.keyboardType = TextInputType.text,
     this.inputFormatters,
-    this.validatorNumber = false,
+    this.validatorStrength = false,
   });
 
   final GlobalKey<FormFieldState<String>>? formFieldKey;
@@ -17,7 +17,7 @@ class WidgetTextFormField extends StatelessWidget {
   final String labelText;
   final String? hintText;
   final List<TextInputFormatter>? inputFormatters;
-  final bool validatorNumber;
+  final bool validatorStrength;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class WidgetTextFormField extends StatelessWidget {
           if (value == null || value.isEmpty) {
             return 'Pole nie może być puste';
           }
-          if (validatorNumber == true) {
+          if (validatorStrength == true) {
             int strenght = int.parse(value);
             if (strenght <= 0) {
               return 'Ilość alkoholu nie może być mniejsza niż 0 %';
